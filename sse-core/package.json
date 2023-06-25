@@ -1,9 +1,17 @@
 {
-  "name": "sse-core",
+  "name": "node-server-sent-events",
+  "description": "a dependency free, fully typed module for adding server sent events to express and other node http servers",
+  "keywords": [
+    "server sent events",
+    "express",
+    "express server sent events",
+    "express sse",
+    "sse"
+  ],
   "packageManager": "yarn@3.5.1",
   "module": "./src/index.ts",
   "main": "./dist/index.js",
-  "types": "./dist/types.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "quality lint",
     "lint-fix": "quality lint-fix",

@@ -6,6 +6,6 @@
   "compilerOptions": {
     "emitDeclarationOnly": true,
     "declaration": true,
-    "outFile": "dist/types.d.ts"
+    "outDir": "dist"
   }
 }
