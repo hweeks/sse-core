@@ -1,0 +1,25 @@
+{
+  "name": "sse-core",
+  "packageManager": "yarn@3.5.1",
+  "module": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/types.d.ts",
+  "scripts": {
+    "lint": "quality lint",
+    "lint-fix": "quality lint-fix",
+    "build-types": "quality build-types",
+    "build-dist": "esbuild ./src/index.ts --outfile=./dist/index.js --bundle --platform=node --target=es2017 --format=cjs",
+    "prepublishOnly": "yarn build-types && yarn build-dist",
+    "test": "quality test",
+    "local-dev": "nodemon --inspect --signal SIGTERM --watch src ./server-dev -e ts",
+    "dev": "nodemon --inspect --signal SIGTERM --watch src ./server-dev -e ts"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.17",
+    "@types/node": "20.3.1",
+    "esbuild": "0.18.7",
+    "jest": "29.5.0",
+    "quality": "workspace:*",
+    "typescript": "5.0.4"
+  }
+}
