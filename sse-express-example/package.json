@@ -1,0 +1,29 @@
+{
+  "name": "sse-express-example",
+  "packageManager": "yarn@3.5.1",
+  "devDependencies": {
+    "@swc/core": "1.3.56",
+    "@swc/jest": "0.2.26",
+    "@types/express": "4.17.17",
+    "jest": "29.5.0",
+    "quality": "workspace:*",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "cookie-parser": "1.4.6",
+    "esbuild": "0.17.18",
+    "esbuild-register": "3.4.2",
+    "express": "4.18.2",
+    "helmet": "7.0.0",
+    "node-server-sent-events": "workspace:*",
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "lint": "quality lint",
+    "lint-fix": "quality lint-fix",
+    "build-types": "quality build-types",
+    "test": "quality test",
+    "local-dev": "nodemon --inspect --signal SIGTERM --watch src ./server-dev -e ts",
+    "dev": "nodemon --inspect --signal SIGTERM --watch src ./server-dev -e ts"
+  }
+}
